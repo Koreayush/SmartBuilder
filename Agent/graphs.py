@@ -14,7 +14,7 @@ from Agent.tools import *
 ## Model
 token = os.getenv("GROQ_API_TOKEN")
 llm = ChatGroq(
-    model="openai/gpt-oss-120b",
+    model="llama-3.3-70b-versatile",
     temperature=0.3
 )
 
@@ -96,6 +96,7 @@ builder.add_conditional_edges("coder_agent",
 builder.set_entry_point("planner_node")
 
 graph = builder.compile()
+
 
 
 # creating a main function to call the output
